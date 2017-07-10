@@ -18,8 +18,8 @@ describe('disableRegExpCapture', function () {
       new RegExp(disableRegExpCapture(/\[(https:\/\/.+.(jpe?g|gif|png))\]/))
       , /\[(?:https:\/\/.+.(?:jpe?g|gif|png))\]/)
     assert.regexpEqual(
-      new RegExp(disableRegExpCapture(/^\[((project)\/(page))\]$/))
-      , /^\[(?:(?:project)\/(?:page))\]$/)
+      new RegExp(disableRegExpCapture(/^\[((projectName)\/(pageTitle))\]$/))
+      , /^\[(?:(?:projectName)\/(?:pageTitle))\]$/)
   })
 
   it('do nothing if not capured', function () {
