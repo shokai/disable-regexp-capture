@@ -3,7 +3,7 @@
 module.exports = function (regexp) {
   return regexp
     .source
-    .replace(/\(\((?!\?)/g, function (bracket){
+    .replace(/\(\((?!\?)/g, function (bracket) {
       return bracket + '?:'
     })
     .replace(/(^|[^\\])\((?!\?)/g, function (bracket) {
