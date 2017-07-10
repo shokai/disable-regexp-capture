@@ -1,0 +1,23 @@
+{
+  "name": "disable-regexp-capture",
+  "version": "0.0.1",
+  "description": "convert parentheses to non-capturing-parentheses",
+  "main": "index.js",
+  "scripts": {
+    "test": "run-s test:*",
+    "test:mocha": "NODE_ENV=test ./node_modules/.bin/mocha 'test/*.js' --timeout 5000"
+  },
+  "keywords": [
+    "RegExp",
+    "parentheses",
+    "capture"
+  ],
+  "author": "Sho Hashimoto <hashimoto@shokai.org>",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2",
+    "npm-run-all": "^4.0.2",
+    "standard": "^10.0.2"
+  }
+}
