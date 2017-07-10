@@ -1,5 +1,5 @@
-// const disableRegexpCapture = require('disable-regexp-capture')
 const disableRegexpCapture = require('../')
+// const disableRegexpCapture = require('disable-regexp-capture')
 
 const pattern = /\[([^[\]]+)\]/
 const src = 'aaa [tag1] bbb [tag2] ccc'
