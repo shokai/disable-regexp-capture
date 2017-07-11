@@ -1,6 +1,6 @@
 {
   "name": "disable-regexp-capture",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "convert parentheses to non-capturing-parentheses: `(.+)` -> `(?:.+)`",
   "main": "index.js",
   "scripts": {
