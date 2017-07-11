@@ -27,13 +27,13 @@ console.log(disabledPattern)
 
 ### Behavior of `String.prototype.split` with RegExp.
 
-without parentheses
+without captureing-parentheses
 ```js
 'aaa [tag1] bbb [tag2] ccc'.split(/\[[^[\]]+\]/)
 // => [ 'aaa ', ' bbb ', ' ccc' ]
 ```
 
-with parentheses
+with captureing-parentheses
 ```js
 'aaa [tag1] bbb [tag2] ccc'.split(/\[([^[\]]+)\]/)
 // => [ 'aaa ', 'tag1', ' bbb ', 'tag2', ' ccc' ]
@@ -42,13 +42,13 @@ with parentheses
 // => [ 'aaa ', '[tag1]', ' bbb ', '[tag2]', ' ccc' ]
 ```
 
-with nested parentheses
+with nested captureing-parentheses
 ```js
 'aaa [tag1] bbb [tag2] ccc'.split(/(\[([^[\]]+)\])/)
 // => [ 'aaa ', '[tag1]', 'tag1', ' bbb ', '[tag2]', 'tag2', ' ccc' ]
 ```
 
-non-capturing-parentheses in parentheses
+non-capturing-parentheses in captureing-parentheses
 ```js
 'aaa [tag1] bbb [tag2] ccc'.split(/(\[(?:[^[\]]+)\])/)
 // => [ 'aaa ', '[tag1]', ' bbb ', '[tag2]', ' ccc' ]
