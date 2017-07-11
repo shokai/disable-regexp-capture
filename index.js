@@ -3,10 +3,10 @@
 module.exports = function (regexp) {
   return regexp
     .source
-    .replace(/\(\((?!\?)/g, function (bracket) {
-      return bracket + '?:'
+    .replace(/\(\((?!\?)/g, function (leftParenthesis) {
+      return leftParenthesis + '?:'
     })
-    .replace(/(^|[^\\])\((?!\?)/g, function (bracket) {
-      return bracket + '?:'
+    .replace(/(^|[^\\])\((?!\?)/g, function (leftParenthesis) {
+      return leftParenthesis + '?:'
     })
 }
