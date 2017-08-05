@@ -1,7 +1,7 @@
 {
   "name": "disable-regexp-capture",
   "version": "0.0.4",
-  "description": "convert parentheses to non-capturing-parentheses: `(.+)` -> `(?:.+)`",
+  "description": "convert group to non-capturing-group: `(.+)` -> `(?:.+)`",
   "main": "index.js",
   "scripts": {
     "test": "run-s test:*",
@@ -10,6 +10,7 @@
   },
   "keywords": [
     "RegExp",
+    "group",
     "parentheses",
     "capture"
   ],

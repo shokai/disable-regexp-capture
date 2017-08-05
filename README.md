@@ -1,6 +1,6 @@
 # disable-regexp-capture
 
-convert parentheses to non-capturing-parentheses: `(.+)` -> `(?:.+)`
+convert group to non-capturing group `(.+)` -> `(?:.+)`
 
 - https://npmjs.com/package/disable-regexp-capture
 - https://github.com/shokai/disable-regexp-capture
@@ -27,13 +27,13 @@ console.log(disabledPattern)
 
 ### Behavior of `String.prototype.split` with RegExp.
 
-without captureing-parentheses
+without capturing-group
 ```js
 'aaa [tag1] bbb [tag2] ccc'.split(/\[[^[\]]+\]/)
 // => [ 'aaa ', ' bbb ', ' ccc' ]
 ```
 
-with captureing-parentheses
+with capturing-group
 ```js
 'aaa [tag1] bbb [tag2] ccc'.split(/\[([^[\]]+)\]/)
 // => [ 'aaa ', 'tag1', ' bbb ', 'tag2', ' ccc' ]
@@ -42,13 +42,13 @@ with captureing-parentheses
 // => [ 'aaa ', '[tag1]', ' bbb ', '[tag2]', ' ccc' ]
 ```
 
-with nested captureing-parentheses
+with nested capturing-group
 ```js
 'aaa [tag1] bbb [tag2] ccc'.split(/(\[([^[\]]+)\])/)
 // => [ 'aaa ', '[tag1]', 'tag1', ' bbb ', '[tag2]', 'tag2', ' ccc' ]
 ```
 
-non-capturing-parentheses in captureing-parentheses
+non-capturing-group in capturing-group
 ```js
 'aaa [tag1] bbb [tag2] ccc'.split(/(\[(?:[^[\]]+)\])/)
 // => [ 'aaa ', '[tag1]', ' bbb ', '[tag2]', ' ccc' ]
