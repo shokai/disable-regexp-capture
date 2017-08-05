@@ -1,6 +1,6 @@
 {
   "name": "disable-regexp-capture",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "convert group to non-capturing-group: `(.+)` -> `(?:.+)`",
   "main": "index.js",
   "scripts": {
