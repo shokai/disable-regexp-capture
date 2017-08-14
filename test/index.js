@@ -42,5 +42,9 @@ describe('disableRegExpCapture', function () {
       new RegExp(disableRegExpCapture(/(?:shokai)/))
       , /(?:shokai)/
     )
+    assert.regexpEqual(
+      new RegExp(disableRegExpCapture(/\[(https?:\/\/(?:www\.|)youtube\.com\/watch\?v=([a-zA-Z\d_-]+))\]/))
+      , /\[(?:https?:\/\/(?:www\.|)youtube\.com\/watch\?v=(?:[a-zA-Z\d_-]+))\]/g
+    )
   })
 })
